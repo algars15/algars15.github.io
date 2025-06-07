@@ -10,7 +10,7 @@
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
-      background-color: #32cdff; /* blau clar base */
+      background-color: #32cdff;
       background-image:
         linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%),
         linear-gradient(-45deg, rgba(255,255,255,0.15) 25%, transparent 25%),
@@ -20,19 +20,40 @@
       background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
       color: #222;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .fade-in-delay-1 { animation-delay: 0.3s; }
+    .fade-in-delay-2 { animation-delay: 0.6s; }
+    .fade-in-delay-3 { animation-delay: 0.9s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .container {
       background: white;
       padding: 2rem 2.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
+
     header {
       text-align: center;
       margin-bottom: 2rem;
     }
+
     h1 {
       color: #0055a5;
     }
+
     .team-photo {
       display: block;
       margin: 1rem auto;
@@ -41,17 +62,20 @@
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
+
     section {
       margin-bottom: 2rem;
     }
+
     ul {
       list-style-type: disc;
       padding-left: 20px;
     }
+
     .member {
       margin-bottom: 1rem;
     }
-    /* Nou estil per l'iframe del vídeo */
+
     section iframe {
       display: block;
       margin: 0 auto;
@@ -61,6 +85,7 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
       border: 3px solid #0055a5;
     }
+
     .download-link {
       display: inline-block;
       background-color: #007acc;
@@ -71,10 +96,11 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
+
     .download-link:hover {
       background-color: #005a99;
     }
-    /* Estil per la descripció sota el vídeo */
+
     .youtube-description {
       text-align: center;
       font-size: 0.9rem;
@@ -84,45 +110,42 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* Estil per l'enllaç del vídeo */
-    .youtube-link a {
-      color: #0055a5;
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
+    <header class="fade-in fade-in-delay-1">
       <h1>Pengo - Sin Luces</h1>
-      <p> Pengo és un joc arcade llançat el 1982 per Sega. El jugador controla un pingüí anomenat Pengo, que ha de navegar per un laberint de blocs de gel mentre és perseguit per enemics anomenats Sno-Bees. Per derrotar-los, Pengo pot lliscar blocs de gel per aixafar-los o atrapar-los contra una paret per electrocutar-los.
 
-      Aquest joc és una recreació del joc original Pengo, fet amb finalitats educatives.
+      <p style="font-size: 1.05rem; line-height: 1.6;">
+        <strong><em>Pengo - Sin Luces</em></strong> és una reinterpretació educativa del clàssic arcade <strong>Pengo</strong> (Sega, 1982), on et posaràs a la pell d’un valent pingüí que ha de sobreviure en un laberint de gel mentre s’enfronta als temibles <strong>Sno-Bees</strong>.
+      </p>
 
-      Aixafa els Sno-Bees, llisca pel gel i sobreviu al fred!</p>
+      <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.5;">
+        <li>💠 Llisca blocs de gel per eliminar enemics.</li>
+        <li>⚡ Utilitza les parets per electrocutar-los.</li>
+        <li>🧭 Navega pel laberint i sobreviu el màxim temps possible.</li>
+      </ul>
+
+      <p style="font-size: 1rem; margin-top: 1rem; color: #444;">
+        Aquest projecte s’ha desenvolupat amb finalitats educatives a la UPC, i vol ser un petit homenatge a l’esperit dels jocs retro 🎮.
+      </p>
+
       <img src="FotoEquip.png" alt="Foto de l'equip" class="team-photo" />
       <p style="text-align:center; font-size: 0.9rem; color:#666; margin-top: 0.5rem;">
         Logo de l'equip.
       </p>
     </header>
 
-    <section>
+    <section class="fade-in fade-in-delay-2">
       <h2>Contribucions dels membres</h2>
-      <div class="member">
-        <strong>Martí Mira:</strong> Programació i disseny.
-      </div>
-      <div class="member">
-        <strong>Diego del Aguila:</strong> Programació i disseny.
-      </div>
-      <div class="member">
-        <strong>Manel Montes:</strong> Programació i disseny.
-      </div>
-      <div class="member">
-        <strong>Bruno Gomez:</strong> Programació i disseny.
-      </div>
+      <div class="member"><strong>Martí Mira:</strong> Programació i disseny.</div>
+      <div class="member"><strong>Diego del Aguila:</strong> Programació i disseny.</div>
+      <div class="member"><strong>Manel Montes:</strong> Programació i disseny.</div>
+      <div class="member"><strong>Bruno Gomez:</strong> Programació i disseny.</div>
     </section>
 
-    <section>
+    <section class="fade-in fade-in-delay-3">
       <h2 style="text-align:center; color:#0055a5; margin-bottom: 1rem;">Vídeo del Gameplay</h2>
       <iframe
         src="https://www.youtube.com/embed/fl_hN9Yq8uw"
@@ -134,7 +157,7 @@
       </p>
     </section>
 
-    <section style="text-align: center;">
+    <section class="fade-in" style="text-align: center;">
       <h2>Descarrega la última versió</h2>
       <a href="https://github.com/bruno0135/Project1/releases/tag/v1.0" class="download-link" target="_blank" rel="noopener noreferrer">
         Descarrega aquí la versió més recent
@@ -143,4 +166,3 @@
   </div>
 </body>
 </html>
-
