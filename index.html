@@ -3,10 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La meva web a GitHub Pages</title>
+  <title>Projecte del Joc - Equip UPC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      color: #0055a5;
+    }
+    .team-photo {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .member {
+      margin-bottom: 1rem;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    .download-link {
+      display: inline-block;
+      background-color: #007acc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .download-link:hover {
+      background-color: #005a99;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola! Aquesta és la meva web creada amb GitHub Pages</h1>
-  <p>Estic aprenent a fer pàgines web!</p>
+  <header>
+    <h1>Pengo - Sin Luces</h1>
+    <p> Pengo és un joc arcade llançat el 1982 per Sega. El jugador controla un pingüí anomenat Pengo, 	que ha de navegar per un laberint de blocs de gel mentre és perseguit per enemics anomenats Sno-	Bees. Per derrotar-los, Pengo pot lliscar blocs de gel per aixafar-los o atrapar-los contra una 	paret per electrocutar-los.
+
+	Aquest joc és una recreació del joc original Pengo, fet amb finalitats educatives.
+
+	Aixafa els Sno-Bees, llisca pel gel i sobreviu al fred!</p>
+    <img src="equip.jpg" alt="Foto de l'equip" class="team-photo" />
+  </header>
+
+  <section>
+    <h2>Contribucions dels membres</h2>
+    <div class="member">
+      <strong>Martí Mira:</strong> Programació i disseny.
+    </div>
+    <div class="member">
+      <strong>Diego del Aguila:</strong> Programació i disseny.
+
+    </div>
+    <div class="member">
+      <strong>Manel Montes:</strong> Programació i disseny.
+
+    </div>
+    <div class="member">
+      <strong>Bruno Gomez:</strong> Programació i disseny.
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Vídeo del Gameplay</h2>
+    <iframe 
+      src="https://youtu.be/fl_hN9Yq8uw" 
+      title="Vídeo gameplay" 
+      allowfullscreen 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+    <p style="text-align:center; font-size: 0.9rem; color:#666; margin-top: 0.5rem;">
+      Vídeo presentant el projecte amb context, gameplay i eines de depuració.
+    </p>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Descarrega la última versió</h2>
+    <a href="https://github.com/bruno0135/Project1/releases/tag/v1.0" class="download-link" target="_blank" rel="noopener noreferrer">
+      Descarrega aquí la versió més recent
+    </a>
+  </section>
 </body>
 </html>
+
